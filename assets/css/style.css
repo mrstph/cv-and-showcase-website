@@ -1,0 +1,709 @@
+/* ~~~~~~~~ FONTS ~~~~~~~~ */
+
+@font-face {
+  font-family: 'Baloo Paaji 2';
+  src: url('assets/fonts/BalooPaaji2-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* ~~~~~~~~ VARIABLES ~~~~~~~~ */
+
+:root {
+  --main-color: #003B36;
+  --secondary-color: #BBDBB4;
+  --third-color: #ECE5F0 ;
+  --fourth-color: #D17C13;
+}
+
+/* ~~~~~~~~ PROPERTIES FOR ALL WEBSITE ~~~~~~~~ */
+
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 62.5%;
+  background-color: var(--third-color);
+  color: var(--main-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ~~~ FOCUS ~~~ */
+
+:focus-visible {
+  outline: var(--fourth-color) solid 3px;
+}
+
+/* ~~~ TEXT ~~~ */
+
+h1 {
+  font-family: 'Baloo Paaji 2', sans-serif;
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+  text-align: center;
+  line-height: 1rem;
+}
+
+h2, h3 {
+  font-family: 'Baloo Paaji 2', sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2.4rem;
+}
+
+h3 {
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+li {
+  font-size: 2rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* TEXT - desktop only*/
+
+@media screen and (min-width: 992px) { 
+
+  .br {
+    display: none;
+  }
+
+}
+
+/* ~~~ CONTAINER ~~~ */
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 60px 20px;
+}
+
+/* ~~~~~~~~ BREADCRUMB ~~~~~~~~ */
+
+#breadcrumb-top {
+  padding: 90px 20px 0 20px;
+}
+
+#breadcrumb-bottom {
+  padding: 45px 20px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb a {
+  font-size: 16px;
+}
+  
+.breadcrumb li:not(:last-child)::after {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; font-size: 16px; color:var(--fourth-color); content: "\f061";
+  margin: 0 8px;
+}
+
+/* ~~~ BUTTONS ~~~ */
+
+.btn {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  text-align: center;
+  width: 320px;
+  margin: 30px auto 0;
+}
+
+.btn-light {
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  border: var(--secondary-color) solid 2px;
+}
+
+.btn-light:hover {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  border: var(--third-color) solid 2px;
+  transition: .3s;
+}
+
+.btn-dark {
+  color: var(--third-color);
+  background-color: var(--main-color);
+  border: var(--main-color) solid 2px;
+}
+
+.btn-dark:hover {
+  background-color: var(--third-color);
+  color: var(--main-color);
+  transition: .3s;
+}
+
+/* ~~~ COLOR FOR BACKGROUND & TEXT ~~~ */
+
+.background-main-color {
+  background-color: var(--main-color);
+}
+
+.color-main-color {
+  color: var(--main-color);
+}
+
+.background-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.color-secondary-color {
+  color: var(--secondary-color);
+}
+
+.background-third-color {
+  background-color: var(--third-color);
+}
+
+.color-third-color {
+  color: var(--third-color);
+}
+
+/* ~~~~~~~~ ANCHORS ~~~~~~~~ */
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+
+/* ~~~~~~~~ NAV MENU  ~~~~~~~~ */
+
+#navigation {
+  position: fixed;
+  width: 100%;
+  height: 6.4rem;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  color: #fff;
+  z-index: 2;
+}
+
+#menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#menu-logo-ms {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 3;
+  width: 3.6rem;
+}
+
+#menu li {
+  justify-content: space-between;
+}
+
+#menu li a{
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* NAV MENU - mobine only */
+
+@media screen and (max-width: 991px) {
+
+  #logo-toggle {
+    height: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0px 2rem;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 0;
+  }
+
+  .toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .open {
+    display: block;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .opened .open {
+    display: none;
+  }
+
+  .opened .close {
+    display: block;
+  }
+
+  .opened #menu {
+    transform: translateX(0);
+  }
+
+  #menu {
+    height: 100vh;
+    margin: 0;
+    background: var(--main-color);
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+}
+
+/* NAV MENU - mobine only */
+
+@media screen and (min-width: 992px) {
+
+  .toggle {
+    display: none;  
+  }
+
+  #menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+  }
+
+  #menu li a {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+
+  #menu li a:hover {
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    transition: .3s;
+  }
+
+}
+
+/* ~~~~~~~~ "PRESENTATION" SECTION ~~~~~~~~ */
+
+#dessin_main_ms {
+  height: 300px;
+  display: block;
+  margin: 100px auto 0 auto;
+}
+
+h1 span {
+  display: block;
+}
+
+#presentation-name {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  line-height: 3.6rem;
+}
+
+#presentation-post {
+  font-size: 3rem;
+  line-height: 2.6rem;
+}
+
+/* PRESENTATION desktop only */
+
+@media screen and (min-width: 992px) {
+  .br {
+    display: none;
+  }
+}
+ 
+/* ~~~~~~~~ "COMPETENCES" SECTION ~~~~~~~~ */
+
+.slide-content {
+  padding: 10px;
+}
+
+.skill-img {
+  display: block;
+  height: 250px;
+  margin: 20px auto;
+}
+
+.content-skill-list li {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 2rem;
+}
+
+.content-skill-list span {
+  position: relative;
+  left: 2px;
+}
+
+#hard-skills li {
+  list-style: none;
+}
+
+.skills-logo {
+  width: 20px;
+}
+
+#language {
+  padding-top: 30px;
+}
+
+.slick-slide img.skills-logo {
+  display: inline;
+}
+
+/* COMPETENCES - desktop only */
+
+@media screen and (min-width: 992px) { 
+
+  #slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .slide-content {
+    margin: 0;
+  }
+
+}
+
+/* ~~~~~~~~ "REALISATIONS" SECTION ~~~~~~~~ */
+
+#realisation-website-img {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+#other-tab::after {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f08e";
+  padding-left: 10px;
+}
+
+/* REALISATIONS - desktop only */
+
+@media screen and (min-width:992px) {
+  
+  #realisation-website-img {
+    width: 60%;
+  }
+
+}
+
+/* ~~~~~~~~ "PARCOURS" SECTION ~~~~~~~~ */
+
+#nom-realisation {
+  padding: 30px 0 0 0;
+}
+
+.experience {
+  margin: 50px;
+}
+
+.experience p {
+  margin: 0 auto;
+}
+
+.experience h3 {
+  margin: 0;
+}
+
+.date {
+  color: var(--fourth-color);
+}
+
+#return-btn {
+  height: 80px;
+}
+
+/* ~~~~~~~~ FOOTER ~~~~~~~~ */
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+#copyright {
+  font-size: 1.2rem;
+  color: var(--third-color);
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+#footer-links a {
+  font-size: 1.2rem;
+  color: var(--third-color);
+  text-decoration: underline;
+}
+
+#footer-links ul {
+  padding-bottom: 30px;
+}
+
+#footer-socials {
+  flex: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#footer-socials li {
+  display: inline-block;
+}
+
+#footer-socials li img {
+  width: 48px;
+}
+
+/* FOOTER - mobile and tablet only */
+
+@media screen and (max-width: 991px) {
+  
+  #footer-links ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+}
+
+/* FOOTER - desktop only */
+
+@media screen and (min-width: 992px) { 
+
+  footer li {
+    display: inline;
+  }
+
+  #footer-links ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  #footer-links a:hover {
+    color: var(--fourth-color);
+  }
+
+}
+
+/* ~~~~~~~~ "MON PARCOURS" PAGE'S STYLE ~~~~~~~~ */
+
+
+#graphisme:before {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f5ad";
+  padding-right: 10px;
+}
+
+#graphisme:after {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f5ad";
+  padding-left: 10px;
+}
+
+#formation:before {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f19d";
+  padding-right: 10px;
+}
+
+#formation:after {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f19d";
+  padding-left: 10px;
+}
+
+#other-experiences:before {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f818";
+  padding-right: 10px;
+}
+
+#other-experiences:after {
+  font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f275";
+  padding-left: 10px;
+}
+
+/* ~~~~~~~~ LEGAL PAGE'S STYLE ~~~~~~~~ */
+
+.legal-div {
+  margin: 50px 20px;
+}
+
+.legal-div p {
+  margin: 0 auto;
+}
+
+#legal-page p, #legal-page h2 {
+  color: var(--main-color);
+  text-align: left;
+}
+
+#legal-page a{
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+/* ~~~~~~~~ SLICK STYLE ~~~~~~~~ */
+
+/* ~~~~ ARROWS FOR SLIDER ~~~~ */
+
+.slick-prev:before {
+  font-family: 'Fredoka One', sans-serif;
+  content: "<";
+  color: var(--fourth-color);
+  font-size: 40px;
+}
+
+.slick-next:before {
+  font-family: 'Fredoka One', sans-serif;
+  content: ">";
+  color: var(--fourth-color);
+  font-size: 40px;
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 20%;
+  display: block;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: -10px;
+}
+
+/* ~~~~ DOTS FOR SLIDER ~~~~ */
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -50px;
+  display: block;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 50px;
+  line-height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '•';
+  text-align: center;
+  opacity: 1;
+  color: var(--secondary-color);
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: var(--main-color);
+}
